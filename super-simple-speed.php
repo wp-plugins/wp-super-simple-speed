@@ -5,7 +5,7 @@ Plugin URI: http://yooplugins.com
 Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed ! Uses gzip compression, leverages browser cache, includes automatic hotlink protection, defers javascript and much more. Plugin is less than 10kb in size. 
 Author: RSPublishing
 Author URI: http://yooplugins.com
-Version: 1.0
+Version: 1.1
 */
 
 /*
@@ -29,7 +29,7 @@ Version: 1.0
 require_once('inc-functions.php');
 
 global $super_simple_speed;
-global $hotlink, $hta1, $hta2, $hta3, $hta4;
+global $hotlink, $hta1, $hta2, $hta3, $hta4, $hta5;
 
 $url = strtolower(get_bloginfo('url'));
 $url = str_replace('https://','',$url);
@@ -105,7 +105,7 @@ RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 	$hta4 .= '# Enable Keepalive end #'."\r\n"."\r\n";
 	
 	$hta5 .= '# Use UTF-8 encoding Start #'."\r\n"."\r\n";
-	$hta5 .= 'AddDefaultCharset utf-8'."\r\n";
+	$hta5 .= 'AddDefaultCharset utf-8'."\r\n"."\r\n";
 	$hta5 .= '# Use UTF-8 encoding End #'."\r\n"."\r\n";
 	$hta5 .= '# WP Super Simple Speed by Rynaldo Stoltz Ends - http://wpemergencyroom.com/ #'."\r\n"."\r\n";
 
@@ -113,7 +113,7 @@ $super_simple_speed = ABSPATH.'.htaccess';
 
 function gear_5_activate() {
 	global $super_simple_speed;
-	global $hotlink, $hta1, $hta2, $hta3, $hta4;
+	global $hotlink, $hta1, $hta2, $hta3, $hta4, $hta5;
 
 	if (file_exists($super_simple_speed)) {
 
@@ -123,7 +123,7 @@ function gear_5_activate() {
   	}
 
 	$fh = fopen($super_simple_speed, 'w') or die("can't open file");
-	fwrite($fh, $htaccess.$hotlink.$hta1.$hta2.$hta3.$hta4);
+	fwrite($fh, $htaccess.$hotlink.$hta1.$hta2.$hta3.$hta4.$hta5);
 	fclose($fh);
 }
 
@@ -131,7 +131,7 @@ register_activation_hook( __FILE__, 'gear_5_activate' );
 
 function gear_5_deactivate() {
 	global $super_simple_speed;
-	global $hta1, $hta2, $hta3, $hta4;
+	global $hta1, $hta2, $hta3, $hta4, $hta5;
 
 	if (file_exists($super_simple_speed)) {
 
@@ -139,7 +139,7 @@ function gear_5_deactivate() {
 		$htaccess = fread($fh, filesize($super_simple_speed));
 		fclose($fh);
 
-		$htaccess = str_replace($hta1, $hta2, $hta3, $hta4, "",$htaccess);
+		$htaccess = str_replace($hta1, $hta2, $hta3, $hta4, $hta5, "",$htaccess);
 
 		$fh = fopen($super_simple_speed, 'w') or die("can't open file");
 		fwrite($fh);
@@ -148,5 +148,4 @@ function gear_5_deactivate() {
 }
 
 register_deactivation_hook( __FILE__, 'gear_5_deactivate' );
-
 ?>

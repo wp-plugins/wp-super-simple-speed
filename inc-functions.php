@@ -1,5 +1,4 @@
 <?php
-
 add_action('after_setup_theme','start_cleanup');
 
 function start_cleanup() {
@@ -54,17 +53,15 @@ function dequeue_fa() {
         );
 
     $regex = '/(' .implode('|', $patterns) .')/i';
-
-    foreach( $wp_styles -> registered as $registered ) {
+	// disable error repoting on your hosting account if this spews an invalid argument error
+    foreach((array) $wp_styles -> registered as $registered) {
 
         if( preg_match( $regex, $registered->src) ) {
             wp_dequeue_style( $registered->handle );
             wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
-        }
-    }
-}
+			}
+		}
+	}
 
 add_action( 'wp_enqueue_scripts', 'dequeue_fa' );
-
-
 ?>

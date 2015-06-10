@@ -2,7 +2,7 @@
 Contributors: RSPublishing
 Plugin URI: http://yooplugins.com
 Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL2A
-Tags: image, hotlink, protection, bandwith, speed, gzip, compress, js, css, optimize, performance, fast
+Tags: image, hotlink, protection, bandwith, speed, gzip, compression, js, css, optimize, performance, boost, pagespeed, seo
 Requires at least: 3.2.0
 Tested up to: 4.2.2
 Stable tag: 1.0
@@ -32,7 +32,7 @@ Once activated, the plugin will automatically write several speed and optimizati
 	√ removes query strings from all static resources 
 	√ plugin is less than 10kb in size 
 	√ no unnecessary code or clutter 
-	√ no configurations needed 
+	√ NO CONFIGURATION NEEDED
 	
 = Backup =
 
@@ -41,6 +41,18 @@ Please make sure that you make a backup of your root .htaccess before installing
 = Uninstalling (important) =
 
 Should you for any reason whatsoever decide to deactivate & uninstall this plugin - do keep in mind that doing so will result in your root .htaccess being wiped clean. When this happens, simply head over to your permalink settings and re-save your current permalink structure (this will prevent your site from breaking). Alternatively, you can upload your backed up .htaccess file. Then again, there is no reason to deactivate and uninstall this plugin as it doesn't alter your current .htaccess settings - it simply adds to it !
+
+= See an invalid argument error? (important) =
+
+Disable the display_errors setting on your web hosting account. This is a PHP setting that makes it display potential errors and other such things. The (possible) reported issue is a "Warning" and not an actual error. 
+
+The code actually works fine, it's just that when you have debugging turned on, you'll get this message.
+
+Generally, live websites should not have error displays enabled in the first place. It's not a safe thing to do.
+
+= Feature Requests =
+
+Send us an email here: rcstoltz@gmail.com or [find us here](http://wpemergencyroom/)
 
 The WP Super Simple Speed plugin is maintained by [YOOPlugins.com](http://yooplugins.com/)
 
@@ -57,7 +69,7 @@ Just email us at: rcstoltz@gmail.com / Email Subject : WP Super Simple Speed
 
 == Upgrade Notice ==
 
-none
+= Version 1.1 = 
 
 == Screenshots ==
 
@@ -76,3 +88,8 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL
 = 1.0 =
 
 * first release version
+
+= 1.1 =
+
+* fixed undefined variable error in core file
+* fixed invalid argument supplied for foreach in deque function
