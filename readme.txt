@@ -5,7 +5,7 @@ Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_
 Tags: image, hotlink, protection, bandwith, speed, gzip, compression, js, css, optimize, performance, boost, pagespeed, seo
 Requires at least: 3.2.0
 Tested up to: 4.2.2
-Stable tag: 1.0
+Stable tag: 1.1
 
 Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle (or clutter).
 
