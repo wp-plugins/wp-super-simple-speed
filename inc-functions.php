@@ -1,4 +1,5 @@
 <?php
+
 add_action('after_setup_theme','start_cleanup');
 
 function start_cleanup() {
@@ -64,4 +65,5 @@ function dequeue_fa() {
 	}
 
 add_action( 'wp_enqueue_scripts', 'dequeue_fa' );
+
 ?>

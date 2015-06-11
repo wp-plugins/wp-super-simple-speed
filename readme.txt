@@ -2,10 +2,10 @@
 Contributors: RSPublishing
 Plugin URI: http://yooplugins.com
 Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL2A
-Tags: image, hotlink, protection, bandwith, speed, gzip, compression, js, css, optimize, performance, boost, pagespeed, seo
+Tags: gzip, compression, js, css, optimize, performance, boost, pagespeed, seo, gtmetrix, caching, compress, image, hotlink, protection, bandwith, speed, 
 Requires at least: 3.2.0
 Tested up to: 4.2.2
-Stable tag: 1.1
+Stable tag: 1.2
 
 Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle (or clutter).
 
@@ -21,13 +21,14 @@ Once activated, the plugin will automatically write several speed and optimizati
 
 = Features =
 
-	√ automatic hotlink protection to prevent bandwith stealing
+	√ automatic hotlink protection to prevent bandwith stealing/leeching
 	√ leverages browser caching by setting http header expires (reduces http requests)
 	√ gzip compression using mod deflate(speeds up page load time and saves bandwith by 70%)
 	√ automatically sets UTF-8 encoding for files being served as text/html or text/plain
 	√ enables keepalive (allowing persistent connections) which saves on bandwith
 	√ removes unnecessary clutter from wp head (rsd, version generator, and much more)
 	√ dequeues extra fontAwesome stylesheets loaded to your theme by other plugins
+	√ includes Vary: Accept-Encoding Header (increase performance and score on various performance tools)
 	√ moves all enqueued javascript files to footer while keeping css in header
 	√ removes query strings from all static resources 
 	√ plugin is less than 10kb in size 
@@ -69,7 +70,7 @@ Just email us at: rcstoltz@gmail.com / Email Subject : WP Super Simple Speed
 
 == Upgrade Notice ==
 
-= Version 1.1 = 
+= Version 1.2 = 
 
 == Screenshots ==
 
@@ -93,3 +94,7 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL
 
 * fixed undefined variable error in core file
 * fixed invalid argument supplied for foreach in deque function
+
+= 1.2 =
+
+* added Vary: Accept-Encoding Header directive (increase site performance and score on various performance tools)
