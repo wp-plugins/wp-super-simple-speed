@@ -48,7 +48,7 @@ Please make sure that you make a backup of your root .htaccess before installing
 
 Should you for any reason whatsoever decide to deactivate & uninstall this plugin - do keep in mind that doing so will result in your root .htaccess being wiped clean. When this happens, simply head over to your settings > permalink settings and re-save your current permalink structure (this will prevent your site from breaking). Alternatively, you can upload your backed up .htaccess file. Then again, there is no reason to deactivate and uninstall this plugin as it doesn't alter your current .htaccess settings - it simply adds to it !
 
-= Users Upgarding from v1.2 - v1.3 =
+= Users Upgrading from v1.2 - v1.3 =
 
 Users that are upgrading from v1.2 to v1.3 should do the following AFTER updating:
 
