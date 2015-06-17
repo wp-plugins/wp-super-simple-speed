@@ -6,7 +6,7 @@ Plugin URI: http://yooplugins.com
 Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed ! Uses gzip compression, leverages browser cache, includes automatic hotlink protection, defers javascript and much more. Plugin is less than 10kb in size. 
 Author: RSPublishing
 Author URI: http://yooplugins.com
-Version: 1.2
+Version: 1.3
 */
 
 /*
@@ -108,7 +108,6 @@ RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 	$hta5 .= '# Use UTF-8 encoding Start #'."\r\n"."\r\n";
 	$hta5 .= 'AddDefaultCharset utf-8'."\r\n"."\r\n";
 	$hta5 .= '# Use UTF-8 encoding End #'."\r\n"."\r\n";
-	$hta5 .= '# WP Super Simple Speed by Rynaldo Stoltz Ends - http://wpemergencyroom.com/ #'."\r\n"."\r\n";
 	
 	$hta6 .= '# Enable Vary: Accept-Encoding Start #'."\r\n"."\r\n";
 	$hta6 .= '<IfModule mod_headers.c>'."\r\n";
@@ -117,6 +116,7 @@ RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 	$hta6 .= '</FilesMatch>'."\r\n";
 	$hta6 .= '</IfModule>'."\r\n"."\r\n";
 	$hta6 .= '# Enable Vary: Accept-Encoding end #'."\r\n"."\r\n";
+	$hta6 .= '# WP Super Simple Speed by Rynaldo Stoltz Ends - http://wpemergencyroom.com/ #'."\r\n"."\r\n";
 
 $super_simple_speed = ABSPATH.'.htaccess';
 

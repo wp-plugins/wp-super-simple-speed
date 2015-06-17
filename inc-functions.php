@@ -1,13 +1,10 @@
 <?php
 
-add_action('after_setup_theme','start_cleanup');
-
 function start_cleanup() {
   add_action('init', 'cleanup_head');
 } 
 
 function cleanup_head() {
-
   remove_action( 'wp_head', 'rsd_link' );
   remove_action( 'wp_head', 'feed_links_extra', 3 );
   remove_action( 'wp_head', 'feed_links', 2 );
@@ -22,10 +19,12 @@ function cleanup_head() {
 
 }
 
+add_action('after_setup_theme','start_cleanup');
+
 function remove_qstrings_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) ) {
 		$src = remove_query_arg( 'ver', $src );
-			}
+	}
 	return $src;
 }
 
@@ -45,6 +44,8 @@ function footer_enqueue_scripts() {
 
 add_action('after_setup_theme', 'footer_enqueue_scripts');
 
+// disable error repoting on your hosting account if the following function spews an invalid argument error
+
 function dequeue_fa() {
 
     global $wp_styles;
@@ -54,7 +55,6 @@ function dequeue_fa() {
         );
 
     $regex = '/(' .implode('|', $patterns) .')/i';
-	// disable error repoting on your hosting account if this spews an invalid argument error
     foreach((array) $wp_styles -> registered as $registered) {
 
         if( preg_match( $regex, $registered->src) ) {
@@ -65,5 +65,19 @@ function dequeue_fa() {
 	}
 
 add_action( 'wp_enqueue_scripts', 'dequeue_fa' );
+
+function enqueue_jquery_google_cdn() {
+    wp_deregister_script( 'jquery' );
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', false, '1.11.1');
+    wp_enqueue_script( 'jquery' );
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_jquery_google_cdn' );
+
+function disable_autosave() {
+	wp_deregister_script('autosave');
+}
+
+add_action('wp_print_scripts','disable_autosave');
 
 ?>
