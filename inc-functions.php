@@ -16,7 +16,6 @@ function cleanup_head() {
   remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
   remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
   remove_action( 'wp_head', 'wp_generator' );
-
 }
 
 add_action('after_setup_theme','start_cleanup');
@@ -30,6 +29,8 @@ function remove_qstrings_css_js( $src ) {
 
 add_filter( 'style_loader_src', 'remove_qstrings_css_js', 9999 );
 add_filter( 'script_loader_src', 'remove_qstrings_css_js', 9999 );
+
+// uncomment or remove line 35 - 46 if the function below conflicts/breaks your theme
 
 function footer_enqueue_scripts() {
 

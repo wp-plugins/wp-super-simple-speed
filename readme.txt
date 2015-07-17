@@ -1,19 +1,17 @@
 === WP Super Simple Speed ===
 Contributors: RSPublishing
-Plugin URI: http://yooplugins.com
+Plugin URI: http://optipress.org
 Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL2A
-Tags: gzip, compression, js, css, optimize, performance, boost, pagespeed, seo, gtmetrix, caching, compress, image, hotlink, protection, bandwith, speed, 
+Tags: gzip, compression, js, css, optimize, performance, boost, page speed, pagespeed, seo, gtmetrix, pingdom, yslow, caching, cache, compress, image, hotlink, protection, bandwith, speed, fast, increase conversions, server load, web optimization
 Requires at least: 3.2.0
 Tested up to: 4.2.2
-Stable tag: 1.2
+Stable tag: 1.4.717
 
 Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle (or clutter).
 
 == Description ==
 
 Super Simple Speed is a stable and powerful plugin that dramatically increases your page load speed and gives you a better score on the major speed testing services. Unlike most other similar plugins, WP Super Simple Speed is lightweight (less than 20kb in size), and has no clutter or unnecessary code or configs. Simply, speed ! 
-
-Super Simple Speed will switch your site to 5th gear without any hassle!
 
 = How the plugin works =
 
@@ -35,10 +33,11 @@ Once activated, the plugin will automatically write several speed and optimizati
 	√ removes query strings from all static resources
 	√ plugin is less than 20kb in size 
 	√ no unnecessary code or clutter 
-	√ NO CONFIGURATION NEEDED
-	√ NO LEARNING CURVE
+	√ no configs or learning curve
 	
-	√ more awesome features coming soon
+= Need help with your page speed? =
+
+Don't have the time to optimize your site for best performance and speed? You bump into conflicts when trying? We can help. Visit us at [OPTIPress - The WP Page Speed and Performance Professionals](http://optipress.org/) to see what we can do for you.
 	
 = Backup =
 
@@ -48,16 +47,6 @@ Please make sure that you make a backup of your root .htaccess before installing
 
 Should you for any reason whatsoever decide to deactivate & uninstall this plugin - do keep in mind that doing so will result in your root .htaccess being wiped clean. When this happens, simply head over to your settings > permalink settings and re-save your current permalink structure (this will prevent your site from breaking). Alternatively, you can upload your backed up .htaccess file. Then again, there is no reason to deactivate and uninstall this plugin as it doesn't alter your current .htaccess settings - it simply adds to it !
 
-= Users Upgrading from v1.2 - v1.3 =
-
-Users that are upgrading from v1.2 to v1.3 should do the following AFTER updating:
-
-* deactivate the plugin
-* re-save your current permalink setting
-* reactivate the plugin
-
-While the update will give you the latest files - deactivating/reactivating the plugin will rewrite your .htaccess to include the new/tweaked rules. This does NOT apply to anyone downloading v1.3 upward. Moreover, we don't plan on adding/tweaking any .htaccess rules for upcoming updates so this is really just a once-off task for all users that are upgrading from v1.2 to v1.3. Shoot us an email if you need any help.
-
 = See an invalid argument error? (important) =
 
 Disable the display_errors setting on your web hosting account. This is a PHP setting that makes it display potential errors and other such things. The (possible) reported issue is a "Warning" and not an actual error. 
@@ -66,11 +55,7 @@ The code actually works fine, it's just that when you have debugging turned on, 
 
 Generally, live websites should not have error displays enabled in the first place. It's not a safe thing to do.
 
-= Feature Requests =
-
-Send us an email here: rcstoltz@gmail.com or [find us here](http://wpemergencyroom/)
-
-The WP Super Simple Speed plugin is maintained by [WP Emergency Room](http://wpemergencyroom.com/)
+The WP Super Simple Speed plugin is maintained by [OPTIPress - The WP Page Speed and Performance Professionals](http://optipress.org/)
 
 == Installation ==
 
@@ -81,11 +66,11 @@ The WP Super Simple Speed plugin is maintained by [WP Emergency Room](http://wpe
 
 == Feedback, Questions, Help, Bug Reporting, and Suggestions ==
 
-Just email us at: rcstoltz@gmail.com / Email Subject : WP Super Simple Speed
+Just email us at: info@optipress.org / Email Subject : WP Super Simple Speed
 
 == Upgrade Notice ==
 
-= Version 1.3 = 
+= Version 1.4.717 = 
 
 == Screenshots ==
 
@@ -107,13 +92,12 @@ Correct! Loading the latest version of a hosted script is almost guaranteed to b
 
 = What if i need my autosave enabled? =
 
-Simply open the inc-functions.php file and delete/comment out line 77 - 81 (the following): 
+Simply open the inc-functions.php file and delete/uncomment line 78 - 82
 
-`function disable_autosave() {
-	wp_deregister_script('autosave');
-}
+= Some conflict with my JS =
 
-add_action('wp_print_scripts','disable_autosave');'
+This is likely due to the js to footer function in the plugin due to some responsive themes needing the JS libraries to be in the head section of the code in order to function properly. When this happens, simply uncomment line 35 - 46 in the inc-functions.php file
+
 
 == Donations ==
 
@@ -138,3 +122,12 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL
 
 * added function to load libs from Google CDN (decreases latency | increases parallelism | better caching)
 * automatically disables auto-save function to lower server overheads
+
+= 1.3.1 =
+
+* fixed url in readme
+
+= 1.4.717 =
+
+* general housekeeping
+

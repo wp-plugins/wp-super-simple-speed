@@ -2,15 +2,15 @@
 
 /*
 Plugin Name: WP Super Simple Speed
-Plugin URI: http://yooplugins.com
-Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed ! Uses gzip compression, leverages browser cache, includes automatic hotlink protection, defers javascript and much more. Plugin is less than 10kb in size. 
-Author: RSPublishing
-Author URI: http://yooplugins.com/
-Version: 1.3
+Plugin URI: http://optipress.org/
+Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed! Uses gzip compression, leverages browser cache, includes automatic hotlink protection and much more. Running into problems? Need help with your page speed? Come see us at <a href="http://optipress.org/">OPTIPress</a>. 
+Author: RSPublishing | OPTIPress
+Author URI: http://optipress.org/
+Version: 1.4.717
 */
 
 /*
-  Copyright 2015  Rynaldo Stoltz | WP Super Simple Speed (email : queries@wpemergencyroom.com)
+  Copyright 2015  Rynaldo Stoltz | WP Super Simple Speed (email : info@optipress.org)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ $url = str_replace('www.','',$url);
 
 $hotlink = "
 
-# WP Super Simple Speed by Rynaldo Stoltz Starts - http://wpemergencyroom.com/ #
+# WP Super Simple Speed by Rynaldo Stoltz & OPTIPress Starts - http://optipress.org/ #
 
 # Hotlink Protection Start #
 
@@ -116,7 +116,7 @@ RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 	$hta6 .= '</FilesMatch>'."\r\n";
 	$hta6 .= '</IfModule>'."\r\n"."\r\n";
 	$hta6 .= '# Enable Vary: Accept-Encoding end #'."\r\n"."\r\n";
-	$hta6 .= '# WP Super Simple Speed by Rynaldo Stoltz Ends - http://wpemergencyroom.com/ #'."\r\n"."\r\n";
+	$hta6 .= '# WP Super Simple Speed by Rynaldo Stoltz & OPTIPress Ends - http://optipress.org/ #'."\r\n"."\r\n";
 
 $super_simple_speed = ABSPATH.'.htaccess';
 

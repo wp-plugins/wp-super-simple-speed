@@ -7,4 +7,4 @@
 ?>
 
 <br /><br />
-<center>Having problems with your site ? Do you have a WordPress issue/error or task that you need help with ? <a href="http://wpemergencyroom.com">WP Emergency Room</a> gives you full access to your own personal WordPress support team for any small WordPress related fixes and tasks.</center>
+<center>This site is optimized for page speed and performance by <a href="http://optipress.org/">OPTIPress - The WordPress Page Speed Specialists</a></center>
