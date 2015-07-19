@@ -30,21 +30,6 @@ function remove_qstrings_css_js( $src ) {
 add_filter( 'style_loader_src', 'remove_qstrings_css_js', 9999 );
 add_filter( 'script_loader_src', 'remove_qstrings_css_js', 9999 );
 
-// uncomment or remove line 35 - 46 if the function below conflicts/breaks your theme
-
-function footer_enqueue_scripts() {
-
-	remove_action('wp_head', 'wp_print_scripts');
-	remove_action('wp_head', 'wp_print_head_scripts', 9);
-	remove_action('wp_head', 'wp_enqueue_scripts', 1);
-	add_action('wp_footer', 'wp_print_scripts', 5);
-	add_action('wp_footer', 'wp_enqueue_scripts', 5);
-	add_action('wp_footer', 'wp_print_head_scripts', 5);
-
-}
-
-add_action('after_setup_theme', 'footer_enqueue_scripts');
-
 // disable error repoting on your hosting account if the following function spews an invalid argument error
 
 function dequeue_fa() {

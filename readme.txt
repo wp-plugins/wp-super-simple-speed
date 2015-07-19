@@ -5,7 +5,7 @@ Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_
 Tags: gzip, compression, js, css, optimize, performance, boost, page speed, pagespeed, seo, gtmetrix, pingdom, yslow, caching, cache, compress, image, hotlink, protection, bandwith, speed, fast, increase conversions, server load, web optimization
 Requires at least: 3.2.0
 Tested up to: 4.2.2
-Stable tag: 1.4.717
+Stable tag: 1.4.718
 
 Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle (or clutter).
 
@@ -19,7 +19,7 @@ Once activated, the plugin will automatically write several speed and optimizati
 
 = Features =
 
-	√ automatic hotlink protection to prevent bandwith stealing/leeching
+	√ automatic hotlink protection to prevent bandwidth stealing/leeching
 	√ http header expires - leverages browser caching (reduces http requests)
 	√ gzip compression using mod deflate (speeds up page load time and saves bandwith by 70%)
 	√ load jquery from google cdn (decreases latency | increases parallelism | better caching)
@@ -29,7 +29,6 @@ Once activated, the plugin will automatically write several speed and optimizati
 	√ enables keepalive (allowing persistent connections) which saves on bandwith
 	√ removes unnecessary clutter from wp head (rsd, version generator, and much more)
 	√ dequeues extra fontAwesome stylesheets loaded to your theme by other plugins
-	√ moves all enqueued javascript files to footer while keeping css in header
 	√ removes query strings from all static resources
 	√ plugin is less than 20kb in size 
 	√ no unnecessary code or clutter 
@@ -55,7 +54,7 @@ The code actually works fine, it's just that when you have debugging turned on, 
 
 Generally, live websites should not have error displays enabled in the first place. It's not a safe thing to do.
 
-The WP Super Simple Speed plugin is maintained by [OPTIPress - The WP Page Speed and Performance Professionals](http://optipress.org/)
+The WP Super Simple Speed plugin is maintained by [OPTIPress - The WP Page Speed and Performance Optimization Professionals](http://optipress.org/)
 
 == Installation ==
 
@@ -70,7 +69,7 @@ Just email us at: info@optipress.org / Email Subject : WP Super Simple Speed
 
 == Upgrade Notice ==
 
-= Version 1.4.717 = 
+= Version 1.4.718 = 
 
 == Screenshots ==
 
@@ -93,10 +92,6 @@ Correct! Loading the latest version of a hosted script is almost guaranteed to b
 = What if i need my autosave enabled? =
 
 Simply open the inc-functions.php file and delete/uncomment line 78 - 82
-
-= Some conflict with my JS =
-
-This is likely due to the js to footer function in the plugin due to some responsive themes needing the JS libraries to be in the head section of the code in order to function properly. When this happens, simply uncomment line 35 - 46 in the inc-functions.php file
 
 
 == Donations ==
@@ -131,3 +126,7 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL
 
 * general housekeeping
 
+= 1.4.718 =
+
+* removed footer_enqueue_scripts() function (conflicts with some js functions in responsive themes)
+* fixed typo error

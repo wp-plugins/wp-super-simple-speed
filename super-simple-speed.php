@@ -6,7 +6,7 @@ Plugin URI: http://optipress.org/
 Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed! Uses gzip compression, leverages browser cache, includes automatic hotlink protection and much more. Running into problems? Need help with your page speed? Come see us at <a href="http://optipress.org/">OPTIPress</a>. 
 Author: RSPublishing | OPTIPress
 Author URI: http://optipress.org/
-Version: 1.4.717
+Version: 1.4.718
 */
 
 /*
