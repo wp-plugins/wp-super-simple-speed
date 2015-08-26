@@ -4,9 +4,9 @@
 Plugin Name: WP Super Simple Speed
 Plugin URI: http://optipress.org/
 Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed! Uses gzip compression, leverages browser cache, includes automatic hotlink protection and much more. Running into problems? Need help with your page speed? Come see us at <a href="http://optipress.org/">OPTIPress</a>. 
-Author: RSPublishing | OPTIPress
-Author URI: http://optipress.org/
-Version: 1.4.718
+Author: RSPublishing
+Author URI: http://wp-superformance.com/
+Version: 1.4.810
 */
 
 /*
@@ -29,8 +29,27 @@ Version: 1.4.718
  
 require_once('inc-functions.php');
 
+function rate_wpsuperf($links, $file) {
+	if ($file == plugin_basename(__FILE__)) {
+		$rate_url = 'http://wordpress.org/support/view/plugin-reviews/' . basename(dirname(__FILE__)) . '?rate=5#postform';
+		$wpsuperf_pro = 'http://wp-superformance.com/';
+		$links[] = '<a href="' . $rate_url . '" target="_blank" title="Click here to rate and review this plugin on WordPress.org">Rate this plugin</a>';
+		$links[] = '<a target="_blank" href="'. $wpsuperf_pro .'" title="Get Pro version today" style="padding:1px 3px;color:#fff;background:#feba12;border-radius:1px;">Go&nbsp;Pro</a>';
+	}
+	return $links;
+}
+
+add_filter('plugin_row_meta', 'rate_wpsuperf', 10, 2);
+
 global $super_simple_speed;
-global $hotlink, $hta1, $hta2, $hta3, $hta4, $hta5, $hta6;
+global $hotlink;
+global $hta1;
+global $hta2;
+global $hta3;
+global $hta4;
+global $hta5;
+global $hta6;
+
 
 $url = strtolower(get_bloginfo('url'));
 $url = str_replace('https://','',$url);
@@ -122,7 +141,13 @@ $super_simple_speed = ABSPATH.'.htaccess';
 
 function gear_5_activate() {
 	global $super_simple_speed;
-	global $hotlink, $hta1, $hta2, $hta3, $hta4, $hta5, $hta6;
+	global $hotlink;
+	global $hta1;
+	global $hta2;
+	global $hta3;
+	global $hta4;
+	global $hta5;
+	global $hta6;
 
 	if (file_exists($super_simple_speed)) {
 
@@ -132,7 +157,13 @@ function gear_5_activate() {
   	}
 
 	$fh = fopen($super_simple_speed, 'w') or die("can't open file");
-	fwrite($fh, $htaccess.$hotlink.$hta1.$hta2.$hta3.$hta4.$hta5.$hta6);
+	fwrite($fh, $htaccess.$hotlink);
+	fwrite($fh, $hta1);
+	fwrite($fh, $hta2);
+	fwrite($fh, $hta3);
+	fwrite($fh, $hta4);
+	fwrite($fh, $hta5);
+	fwrite($fh, $hta6);
 	fclose($fh);
 }
 
@@ -140,7 +171,13 @@ register_activation_hook( __FILE__, 'gear_5_activate' );
 
 function gear_5_deactivate() {
 	global $super_simple_speed;
-	global $hta1, $hta2, $hta3, $hta4, $hta5, $hta6;
+	global $hotlink;
+	global $hta1;
+	global $hta2;
+	global $hta3;
+	global $hta4;
+	global $hta5;
+	global $hta6;
 
 	if (file_exists($super_simple_speed)) {
 
@@ -148,10 +185,16 @@ function gear_5_deactivate() {
 		$htaccess = fread($fh, filesize($super_simple_speed));
 		fclose($fh);
 
-		$htaccess = str_replace($hta1, $hta2, $hta3, $hta4, $hta5, $hta6, "",$htaccess);
+		$htaccess = str_replace($hotlink, "", $htaccess);
+		$htaccess = str_replace($hta1, "",$htaccess);
+		$htaccess = str_replace($hta2, "",$htaccess);
+		$htaccess = str_replace($hta3, "",$htaccess);
+		$htaccess = str_replace($hta4, "",$htaccess);
+		$htaccess = str_replace($hta5, "",$htaccess);
+		$htaccess = str_replace($hta6, "",$htaccess);
 
 		$fh = fopen($super_simple_speed, 'w') or die("can't open file");
-		fwrite($fh);
+		fwrite($fh, $htaccess);
 		fclose($fh);
 	}
 }

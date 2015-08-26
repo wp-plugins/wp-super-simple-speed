@@ -1,11 +1,11 @@
 === WP Super Simple Speed ===
 Contributors: RSPublishing
-Plugin URI: http://optipress.org
+Plugin URI: http://wp-superformance.com/
 Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL2A
 Tags: gzip, compression, js, css, optimize, performance, boost, page speed, pagespeed, seo, gtmetrix, pingdom, yslow, caching, cache, compress, image, hotlink, protection, bandwith, speed, fast, increase conversions, server load, web optimization
 Requires at least: 3.2.0
-Tested up to: 4.2.2
-Stable tag: 1.4.718
+Tested up to: 4.2.4
+Stable tag: 1.4.810
 
 Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle (or clutter).
 
@@ -32,29 +32,40 @@ Once activated, the plugin will automatically write several speed and optimizati
 	√ removes query strings from all static resources
 	√ plugin is less than 20kb in size 
 	√ no unnecessary code or clutter 
+	√ one click activate/deactivate
 	√ no configs or learning curve
+	
+= Premium Features = 
+
+	√ EVERYTHING in free version PLUS the following
+	
+	√ full browser caching and content compression (mod_deflate, far-future-expires-headers and cache-control)
+	√ automatically sets UTF-8 character encoding for .css .atom .rdf and several other file types
+	√ forces compression for mangled `Accept-Encoding` request headers
+	√ sends the CORS header for images when requested
+	√ allows cross-origin access to web fonts
+	√ prevents recompression for certain data
+	√ disables post-revisions and auto-drafts
+	√ disables self-pings
+
+	√ includes automatic html/js/css optimization and compression
+	√ includes automatic image lazy loading functionality
+
+	√ one click installation
+	√ ideal for shared-hosting environments
+	√ WooCommerce and EDD compatible
+	√ no annual license renewals
+	√ most lightweight WordPress performance plugin (less than 50KB in size)
 	
 = Need help with your page speed? =
 
-Don't have the time to optimize your site for best performance and speed? You bump into conflicts when trying? We can help. Visit us at [OPTIPress - The WP Page Speed and Performance Professionals](http://optipress.org/) to see what we can do for you.
+Don't have the time to optimize your site for best page speed and performance? Bumping into conflicts when trying? OPTIPress can help. Visit us at [OPTIPress - The WP Page Speed and Performance Professionals](http://optipress.org/) to see what we can do for you.
 	
 = Backup =
 
-Please make sure that you make a backup of your root .htaccess before installing this plugin (just good practice).
+Please make sure that you make a backup of your root .htaccess before installing this plugin (just for good practice).
 
-= Uninstalling (important) =
-
-Should you for any reason whatsoever decide to deactivate & uninstall this plugin - do keep in mind that doing so will result in your root .htaccess being wiped clean. When this happens, simply head over to your settings > permalink settings and re-save your current permalink structure (this will prevent your site from breaking). Alternatively, you can upload your backed up .htaccess file. Then again, there is no reason to deactivate and uninstall this plugin as it doesn't alter your current .htaccess settings - it simply adds to it !
-
-= See an invalid argument error? (important) =
-
-Disable the display_errors setting on your web hosting account. This is a PHP setting that makes it display potential errors and other such things. The (possible) reported issue is a "Warning" and not an actual error. 
-
-The code actually works fine, it's just that when you have debugging turned on, you'll get this message.
-
-Generally, live websites should not have error displays enabled in the first place. It's not a safe thing to do.
-
-The WP Super Simple Speed plugin is maintained by [OPTIPress - The WP Page Speed and Performance Optimization Professionals](http://optipress.org/)
+The WP Super Simple Speed plugin is maintained by [OPTIPress - The WordPress Page Speed and Performance Optimization Professionals](http://optipress.org/)
 
 == Installation ==
 
@@ -69,7 +80,7 @@ Just email us at: info@optipress.org / Email Subject : WP Super Simple Speed
 
 == Upgrade Notice ==
 
-= Version 1.4.718 = 
+= Version 1.4.810 = 
 
 == Screenshots ==
 
@@ -130,3 +141,10 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL
 
 * removed footer_enqueue_scripts() function (conflicts with some js functions in responsive themes)
 * fixed typo error
+
+= 1.4.810 =
+
+* modified deactivate feature (deactivate = will restore user's root .htaccess and only remove rules added by this plugin)
+* modified core super-simple-speed.php file (removed unnecessary code and optimized directives)
+* tested plugin compatibility with core version 4.2.4
+* added link for plugin ratings and premium version
