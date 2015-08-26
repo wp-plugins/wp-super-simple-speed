@@ -39,7 +39,11 @@ Once activated, the plugin will automatically write several speed and optimizati
 
 	√ EVERYTHING in free version PLUS the following
 	
-	√ full browser caching and content compression (mod_deflate, far-future-expires-headers and cache-control)
+	√ full browser caching and content compression
+	
+	√ automatic html/js/css optimization and compression
+	√ automatic image lazy loading functionality
+	
 	√ automatically sets UTF-8 character encoding for .css .atom .rdf and several other file types
 	√ forces compression for mangled `Accept-Encoding` request headers
 	√ sends the CORS header for images when requested
@@ -47,9 +51,6 @@ Once activated, the plugin will automatically write several speed and optimizati
 	√ prevents recompression for certain data
 	√ disables post-revisions and auto-drafts
 	√ disables self-pings
-
-	√ includes automatic html/js/css optimization and compression
-	√ includes automatic image lazy loading functionality
 
 	√ one click installation
 	√ ideal for shared-hosting environments
