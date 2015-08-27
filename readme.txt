@@ -2,10 +2,10 @@
 Contributors: RSPublishing
 Plugin URI: http://wp-superformance.com/
 Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL2A
-Tags: gzip, compression, js, css, optimize, performance, boost, page speed, pagespeed, seo, gtmetrix, pingdom, yslow, caching, cache, compress, image, hotlink, protection, bandwith, speed, fast, increase conversions, server load, web optimization
+Tags: cache, caching, page speed, google page speed, performance, gzip, compression, compress, minify, minification, boost, speed, gtmetrix, pingdom tools, yslow, hotlink protection, browser cache, mod_deflate, cache control, expires header, performance optimization, apache, htaccess, server load, remove query strings, Google CDN, keepalive, accept encoding header
 Requires at least: 3.2.0
-Tested up to: 4.2.4
-Stable tag: 1.4.810
+Tested up to: 4.3
+Stable tag: 1.4.910
 
 Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle (or clutter).
 
@@ -20,9 +20,9 @@ Once activated, the plugin will automatically write several speed and optimizati
 = Features =
 
 	√ automatic hotlink protection to prevent bandwidth stealing/leeching
-	√ http header expires - leverages browser caching (reduces http requests)
-	√ gzip compression using mod deflate (speeds up page load time and saves bandwith by 70%)
-	√ load jquery from google cdn (decreases latency | increases parallelism | better caching)
+	√ HTTP header expires - (reduces http requests)
+	√ GZIP compression (speeds up page load time and saves bandwith)
+	√ loads jquery from google CDN (decreases latency | increases parallelism | better caching)
 	√ includes Vary: Accept-Encoding Header (increase performance and score on various performance tools)
 	√ disables auto-save on posts (lowers overhead on the server that can impact performance)
 	√ automatically sets UTF-8 encoding for files being served as text/html or text/plain
@@ -37,11 +37,11 @@ Once activated, the plugin will automatically write several speed and optimizati
 	
 = Premium Features = 
 
-	√ EVERYTHING in free version PLUS the following
+	√ EVERYTHING in free version PLUS
 	
-	√ full browser caching and content compression
+	√ full browser caching with mod_deflate for content compression, far-future-expires-headers and cache-control headers
 	
-	√ automatic html/js/css optimization and compression
+	√ automatic HTML/JS/CSS optimization/minification
 	√ automatic image lazy loading functionality
 	
 	√ automatically sets UTF-8 character encoding for .css .atom .rdf and several other file types
@@ -81,7 +81,7 @@ Just email us at: info@optipress.org / Email Subject : WP Super Simple Speed
 
 == Upgrade Notice ==
 
-= Version 1.4.810 = 
+= Version 1.4.910 = 
 
 == Screenshots ==
 
@@ -149,3 +149,8 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL
 * modified core super-simple-speed.php file (removed unnecessary code and optimized directives)
 * tested plugin compatibility with core version 4.2.4
 * added link for plugin ratings and premium version
+
+= 1.4.910 = 
+
+* some minor modifications in readme file (includes keywords optimization)
+* tested compatibility with core version 4.3

@@ -3,10 +3,10 @@
 /*
 Plugin Name: WP Super Simple Speed
 Plugin URI: http://optipress.org/
-Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed! Uses gzip compression, leverages browser cache, includes automatic hotlink protection and much more. Running into problems? Need help with your page speed? Come see us at <a href="http://optipress.org/">OPTIPress</a>. 
+Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed! Uses GZIP compression, leverages browser caching, includes automatic hotlink protection and much more. Running into problems? Need help with your page speed? Come see us at <a href="http://optipress.org/">OPTIPress</a>. 
 Author: RSPublishing
 Author URI: http://wp-superformance.com/
-Version: 1.4.810
+Version: 1.4.910
 */
 
 /*

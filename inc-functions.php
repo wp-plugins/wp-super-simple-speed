@@ -30,7 +30,7 @@ function remove_qstrings_css_js( $src ) {
 add_filter( 'style_loader_src', 'remove_qstrings_css_js', 9999 );
 add_filter( 'script_loader_src', 'remove_qstrings_css_js', 9999 );
 
-// disable error repoting on your hosting account if the following function spews an invalid argument error
+// disable error repoting on your hosting account if the following function gives an invalid argument error
 
 function dequeue_fa() {
 
