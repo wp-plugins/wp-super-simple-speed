@@ -3,10 +3,10 @@
 /*
 Plugin Name: WP Super Simple Speed
 Plugin URI: http://optipress.org/
-Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle. Simply activate and enjoy - no configuration needed! Uses GZIP compression, leverages browser caching, includes automatic hotlink protection and much more. Running into problems? Need help with your page speed? Come see us at <a href="http://optipress.org/">OPTIPress</a>. 
+Description: Super Simple Speed is a stable and powerful plugin that dramatically increases your page speed and performance without any hassle. Simply activate and enjoy - no configuration needed! Uses GZIP compression, leverages browser caching, includes automatic hotlink protection and much more. This plugin is also available in premium version which can be found on <a href="http://wp-superformance.com/">WP-Superformance.com</a>.  
 Author: RSPublishing
 Author URI: http://wp-superformance.com/
-Version: 1.4.910
+Version: 1.4.920
 */
 
 /*
@@ -58,9 +58,9 @@ $url = str_replace('www.','',$url);
 
 $hotlink = "
 
-# WP Super Simple Speed by Rynaldo Stoltz & OPTIPress Starts - http://optipress.org/ #
+# WP Super Simple Speed by WP-Superformance.com Starts
 
-# Hotlink Protection Start #
+# Hotlink Protection Start
 
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^$
@@ -68,11 +68,9 @@ RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?".$url." [NC]
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.com [NC]
 RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 
-# Hotlink Protection End #
-
 ";
 
-	$hta1 .= '# GZip Compression Start #'."\r\n"."\r\n";
+	$hta1 .= '# GZIP Compression Start'."\r\n"."\r\n";
 	$hta1 .= '<IfModule mod_deflate.c>'."\r\n";
 	$hta1 .= 'AddOutputFilterByType DEFLATE text/plain'."\r\n";
 	$hta1 .= 'AddOutputFilterByType DEFLATE text/html'."\r\n";
@@ -91,9 +89,8 @@ RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 	$hta1 .= 'BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html'."\r\n";
 	$hta1 .= 'Header append Vary User-Agent env=!dont-vary'."\r\n";
 	$hta1 .= '</IfModule>'."\r\n"."\r\n";
-	$hta1 .= '# GZp Compression End #'."\r\n"."\r\n";
 
-	$hta2 .= '# Leverage Browser Cache Start #'."\r\n"."\r\n";
+	$hta2 .= '# Leverage Browser Caching Start'."\r\n"."\r\n";
 	$hta2 .= '<IfModule mod_expires.c>'."\r\n";
 	$hta2 .= 'ExpiresActive On'."\r\n";
 	$hta2 .= 'ExpiresByType image/jpg "access 1 year"'."\r\n";
@@ -108,34 +105,30 @@ RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 	$hta2 .= 'ExpiresByType image/x-icon "access 1 year"'."\r\n";
 	$hta2 .= 'ExpiresDefault "access 1 month"'."\r\n";
 	$hta2 .= '</IfModule>'."\r\n"."\r\n";
-	$hta2 .= '# Leverage Browser Cache End #'."\r\n"."\r\n";
 	
-	$hta3 .= '# Caching of common files Start #'."\r\n"."\r\n";
+	$hta3 .= '# Caching of common files Start'."\r\n"."\r\n";
 	$hta3 .= '<IfModule mod_headers.c>'."\r\n";
 	$hta3 .= '<FilesMatch "\.(ico|pdf|flv|swf|js|css|gif|png|jpg|jpeg|ico|txt|html|htm)$">'."\r\n";
 	$hta3 .= 'Header set Cache-Control "max-age=2592000, public"'."\r\n";
 	$hta3 .= '</FilesMatch>'."\r\n";
 	$hta3 .= '</IfModule>'."\r\n"."\r\n";
-	$hta3 .= '# Caching of common files End #'."\r\n"."\r\n";
 
-	$hta4 .= '# Enable Keepalive Start #'."\r\n"."\r\n";
+	$hta4 .= '# Enable Keepalive Start'."\r\n"."\r\n";
 	$hta4 .= '<ifModule mod_headers.c>'."\r\n";
 	$hta4 .= 'Header set Connection keep-alive'."\r\n";
 	$hta4 .= '</ifModule>'."\r\n"."\r\n";
-	$hta4 .= '# Enable Keepalive end #'."\r\n"."\r\n";
 	
-	$hta5 .= '# Use UTF-8 encoding Start #'."\r\n"."\r\n";
+	$hta5 .= '# Use UTF-8 encoding Start'."\r\n"."\r\n";
 	$hta5 .= 'AddDefaultCharset utf-8'."\r\n"."\r\n";
-	$hta5 .= '# Use UTF-8 encoding End #'."\r\n"."\r\n";
 	
-	$hta6 .= '# Enable Vary: Accept-Encoding Start #'."\r\n"."\r\n";
+	$hta6 .= '# Enable Vary: Accept-Encoding Start'."\r\n"."\r\n";
 	$hta6 .= '<IfModule mod_headers.c>'."\r\n";
 	$hta6 .= '<FilesMatch "\.(js|css|xml|gz)$">'."\r\n";
 	$hta6 .= 'Header append Vary: Accept-Encoding'."\r\n";
 	$hta6 .= '</FilesMatch>'."\r\n";
 	$hta6 .= '</IfModule>'."\r\n"."\r\n";
-	$hta6 .= '# Enable Vary: Accept-Encoding end #'."\r\n"."\r\n";
-	$hta6 .= '# WP Super Simple Speed by Rynaldo Stoltz & OPTIPress Ends - http://optipress.org/ #'."\r\n"."\r\n";
+
+	$hta6 .= '# WP Super Simple Speed by WP-Superformance.com Ends'."\r\n"."\r\n";
 
 $super_simple_speed = ABSPATH.'.htaccess';
 

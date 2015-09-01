@@ -5,22 +5,17 @@ Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_
 Tags: cache, caching, page speed, google page speed, performance, gzip, compression, compress, minify, minification, boost, speed, gtmetrix, pingdom tools, yslow, hotlink protection, browser cache, mod_deflate, cache control, expires header, performance optimization, apache, htaccess, server load, remove query strings, Google CDN, keepalive, accept encoding header
 Requires at least: 3.2.0
 Tested up to: 4.3
-Stable tag: 1.4.910
+Stable tag: 1.4.920
 
-Super Simple Speed is a stable and powerful plugin that dramatically increases your site speed without any hassle (or clutter).
+Super Simple Speed is a stable and powerful plugin that dramatically increases your page speed without any hassle (or clutter).
 
 == Description ==
 
-Super Simple Speed is a stable and powerful plugin that dramatically increases your page load speed and gives you a better score on the major speed testing services. Unlike most other similar plugins, WP Super Simple Speed is lightweight (less than 20kb in size), and has no clutter or unnecessary code or configs. Simply, speed ! 
-
-= How the plugin works =
-
-Once activated, the plugin will automatically write several speed and optimization rules to your root .htaccess file (without altering or breaking any existing rules in your .htaccess).
+Super Simple Speed is a stable and powerful plugin that dramatically increases your WordPress page load speed and gives you a better performance score on the major speed testing services. Unlike most other similar plugins, WP Super Simple Speed is lightweight (less than 20kb in size), and has no clutter or unnecessary code or configs. Simple performance optimization without any hassle.
 
 = Features =
 
 	√ automatic hotlink protection to prevent bandwidth stealing/leeching
-	√ HTTP header expires - (reduces http requests)
 	√ GZIP compression (speeds up page load time and saves bandwith)
 	√ loads jquery from google CDN (decreases latency | increases parallelism | better caching)
 	√ includes Vary: Accept-Encoding Header (increase performance and score on various performance tools)
@@ -37,36 +32,30 @@ Once activated, the plugin will automatically write several speed and optimizati
 	
 = Premium Features = 
 
-	√ EVERYTHING in free version PLUS
+	√ EVERYTHING in free version plus
 	
 	√ full browser caching with mod_deflate for content compression, far-future-expires-headers and cache-control headers
-	
 	√ automatic HTML/JS/CSS optimization/minification
 	√ automatic image lazy loading functionality
 	
-	√ automatically sets UTF-8 character encoding for .css .atom .rdf and several other file types
-	√ forces compression for mangled `Accept-Encoding` request headers
-	√ sends the CORS header for images when requested
-	√ allows cross-origin access to web fonts
-	√ prevents recompression for certain data
-	√ disables post-revisions and auto-drafts
-	√ disables self-pings
+	√ and much, much more !
 
-	√ one click installation
-	√ ideal for shared-hosting environments
-	√ WooCommerce and EDD compatible
 	√ no annual license renewals
+	√ WooCommerce and EDD compatible
+	√ ideal for shared-hosting environments
 	√ most lightweight WordPress performance plugin (less than 50KB in size)
 	
-= Need help with your page speed? =
-
-Don't have the time to optimize your site for best page speed and performance? Bumping into conflicts when trying? OPTIPress can help. Visit us at [OPTIPress - The WP Page Speed and Performance Professionals](http://optipress.org/) to see what we can do for you.
+See all premium version features on [WP-Superformance](http://wp-superformance.com/)
 	
 = Backup =
 
 Please make sure that you make a backup of your root .htaccess before installing this plugin (just for good practice).
+	
+= Need help with your page speed? =
 
-The WP Super Simple Speed plugin is maintained by [OPTIPress - The WordPress Page Speed and Performance Optimization Professionals](http://optipress.org/)
+Don't have the time to optimize your site for best page speed and performance? Bumping into conflicts when trying? OPTIPress can help. Visit us at [OPTIPress - The WP Page Speed and Performance Professionals](http://optipress.org/) to see what we can do for you.
+
+The WP Super Simple Speed plugin is maintained by [WP-Superformance](http://wp-superformance.com/)
 
 == Installation ==
 
@@ -81,7 +70,7 @@ Just email us at: info@optipress.org / Email Subject : WP Super Simple Speed
 
 == Upgrade Notice ==
 
-= Version 1.4.910 = 
+= Version 1.4.920 = 
 
 == Screenshots ==
 
@@ -104,6 +93,10 @@ Correct! Loading the latest version of a hosted script is almost guaranteed to b
 = What if i need my autosave enabled? =
 
 Simply open the inc-functions.php file and delete/uncomment line 78 - 82
+
+= I updated your plugin and my site broke. What to do? =
+
+If updating WP Super Simple Speed from an older version causes any issues with your site, then please head over to your admin dashboard > settings > permalinks and re-save your current permalink structure. This should resolve the 500 error. Hereafter, please contact our support immediately so we can resolve.
 
 
 == Donations ==
@@ -154,3 +147,9 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLS42C63EVL
 
 * some minor modifications in readme file (includes keywords optimization)
 * tested compatibility with core version 4.3
+
+= 1.4.920 =
+
+* removed unnecessary code from main file
+* some modifications to readme file
+
